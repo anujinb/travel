@@ -1,36 +1,40 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import image1 from '../img/1.jpg';
-import image4 from '../img/4.jpg';
-import image5 from '../img/5.jpg';
-import image7 from '../img/7.jpg';
-import image9 from '../img/9.jpg';
+import React from "react"
+import { makeStyles } from "@material-ui/core/styles"
+import Card from "@material-ui/core/Card"
+import CardMedia from "@material-ui/core/CardMedia"
+import CardContent from "@material-ui/core/CardContent"
+import Typography from "@material-ui/core/Typography"
+import Grid from "@material-ui/core/Grid"
+import { useIntl } from "react-intl"
+
+import message from "./messages"
+import image1 from "../img/1.jpg"
+import image4 from "../img/4.jpg"
+import image5 from "../img/5.jpg"
+import image7 from "../img/12.jpeg"
+import image9 from "../img/9.jpg"
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: '100%',
-    backgroundColor: 'white',
-    alignSelf: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#EFF2F5",
+    alignSelf: "center",
+    justifyContent: "center",
   },
   header: {
-    textAlign: 'center',
+    textAlign: "center",
     paddingTop: 50,
     paddingBottom: 27,
-    fontFamily: 'Akaya Telivigala',
+    fontFamily: "Akaya Telivigala",
   },
-}));
+}))
 
 export default function Cards() {
-  const classes = useStyles();
+  const classes = useStyles()
+  const { formatMessage } = useIntl()
   return (
     <div className={classes.root}>
       <h2 className={classes.header}>Check out this EPIC Destination!</h2>
+
       <Grid container spacing={6} justify="center">
         <Grid item>
           <Card>
@@ -39,7 +43,7 @@ export default function Cards() {
             </CardMedia>
             <CardContent>
               <Typography
-                style={{ fontFamily: 'Akaya Telivigala' }}
+                style={{ fontFamily: "Akaya Telivigala" }}
                 variant="h6"
                 color="textPrimary"
                 component="p"
@@ -56,7 +60,9 @@ export default function Cards() {
             </CardMedia>
             <CardContent>
               <Typography
-                style={{ fontFamily: 'Akaya Telivigala' }}
+                style={{
+                  fontFamily: "Akaya Telivigala",
+                }}
                 variant="h6"
                 color="textPrimary"
                 component="p"
@@ -80,7 +86,7 @@ export default function Cards() {
             </CardMedia>
             <CardContent>
               <Typography
-                style={{ fontFamily: 'Akaya Telivigala' }}
+                style={{ fontFamily: "Akaya Telivigala" }}
                 variant="h6"
                 color="textPrimary"
                 component="p"
@@ -97,7 +103,7 @@ export default function Cards() {
             </CardMedia>
             <CardContent>
               <Typography
-                style={{ fontFamily: 'Akaya Telivigala' }}
+                style={{ fontFamily: "Akaya Telivigala" }}
                 variant="h6"
                 color="textPrimary"
                 component="p"
@@ -114,7 +120,7 @@ export default function Cards() {
             </CardMedia>
             <CardContent>
               <Typography
-                style={{ fontFamily: 'Akaya Telivigala' }}
+                style={{ fontFamily: "Akaya Telivigala" }}
                 variant="h6"
                 color="textPrimary"
                 component="p"
@@ -126,5 +132,5 @@ export default function Cards() {
         </Grid>
       </Grid>
     </div>
-  );
+  )
 }

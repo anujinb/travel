@@ -1,6 +1,6 @@
-import Section from '../components/Section';
-import Cards from '../components/Cards';
-import Footer from './Footer';
+import Section from "../components/Section"
+import Cards from "../components/Cards"
+import Footer from "./Footer"
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       <Cards />
       <Footer />
     </>
-  );
+  )
 }
